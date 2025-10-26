@@ -178,7 +178,26 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u
   -> xong đăng nhập chờ nó chạy lâu một cách khủng hoảng :(( , nên em đổi port 1881, tắt hết các tiến trình đang listen cổng 1881 . Vào file setting.js rồi sửa lại cổng . chạy lệnh khởi động lại trên cmd adm ròi sau đó truy cập localhost:1881 , đăng nhập được vào node red luôn
 <img width="885" height="245" alt="image" src="https://github.com/user-attachments/assets/f1bbf946-727e-4709-b62b-24d66d993ef7" />
 
-  
+
+
+
+
+
+# 2.6. Tạo giao diện front-end:
+- html form gồm các file : index.html, fullname.js, fullname.css <=> index.html , nguyenthithuhien.js, nguyenthithuhien.css
+<img width="1545" height="489" alt="image" src="https://github.com/user-attachments/assets/7d777606-ff20-4e4c-aec6-2df4bf5b53df" />
+- index.html và fullname.css: trang trí tuỳ ý, có dấu ấn cá nhân, có form nhập được thông tin.
+- fullname.js: lấy dữ liệu trên form, gửi đến api nodered đã làm ở bước 2.5, nhận về json, dùng json trả về để tạo giao diện phù hợp với kết quả truy vấn của bạn.
+<img width="1861" height="985" alt="image" src="https://github.com/user-attachments/assets/acf3dd55-bb4a-446b-88dd-3aacfa96efc3" />
+--> Giao diện được để màu mè như trên
+# 2.7. Nhận xét bài làm của mình:
+- đã hiểu quá trình cài đặt các phần mềm và các thư viện như nào?
++ Em hiểu về cách cài đặt phần mềm rồi , chỉnh sửa thay đổi các dữ liệu ở file hosts , fake ip cho domain em tạo. Em biết xử lý khi cổng 80 bị chiếm ,em biết cách cài nodered  về máy. Biết truy cập giao diện nodered để install các thư viện cần thiết và tạo tài khoản nodered của bản thân
+
+- đã hiểu cách sử dụng nodered để tạo api back-end như nào?
+  + em biết sử dụng các flow cơ bản http in, fuction, mssql, http responce và cách kết nối được với sql server của em để chạy nodered
+- đã hiểu cách frond-end tương tác với back-end ra sao?
+   + Em tạo được 3 file index.html, js, css. thì index em dùng để tạo cái khung để tương tác với dữ liệu để hiện thị. Css để tạo thiết kế giao diện theo ý muốn . js dùng để em giao tiếp được dữ liệu backend tới fronted.
 
 
 
