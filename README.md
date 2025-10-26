@@ -177,11 +177,23 @@ node "D:\nodejs\nodered\node_modules\node-red\red.js" -u
 <img width="1863" height="1043" alt="image" src="https://github.com/user-attachments/assets/e469dbe2-d341-4369-8d28-ea67a6d2e42e" />
   -> xong đăng nhập chờ nó chạy lâu một cách khủng hoảng :(( , nên em đổi port 1881, tắt hết các tiến trình đang listen cổng 1881 . Vào file setting.js rồi sửa lại cổng . chạy lệnh khởi động lại trên cmd adm ròi sau đó truy cập localhost:1881 , đăng nhập được vào node red luôn
 <img width="885" height="245" alt="image" src="https://github.com/user-attachments/assets/f1bbf946-727e-4709-b62b-24d66d993ef7" />
-
-
-
-
-
+# 2.5. tạo api back-end bằng nodered:
+- tại flow1 trên nodered, sử dụng node `http in` và `http response` để tạo api
+<img width="1017" height="190" alt="image" src="https://github.com/user-attachments/assets/4d773fff-8621-447d-a9ec-9d5d79e6990d" />
+- thêm node `MSSQL` để truy vấn tới cơ sở dữ liệu
+- logic flow sẽ gồm 4 node theo thứ tự sau (thứ tự nối dây): 
+  1. http in  : dùng GET cho đơn giản, URL đặt tuỳ ý, ví dụ: /timkiem
+<img width="653" height="397" alt="image" src="https://github.com/user-attachments/assets/d3b73df5-9a5c-4845-ace8-3814c9d4ba41" />
+2. function : để tiền xử lý dữ liệu gửi đến
+<img width="818" height="629" alt="image" src="https://github.com/user-attachments/assets/82a5277f-799d-43e6-936d-c706acdd9522" />
+  3. MSSQL: để truy vấn dữ liệu tới CSDL, nhận tham số từ node tiền xử lý
+<img width="636" height="924" alt="image" src="https://github.com/user-attachments/assets/6e7eb90c-82d9-4e84-844f-a75005094566" />
+<img width="637" height="731" alt="image" src="https://github.com/user-attachments/assets/a08fc6a2-f376-454b-b570-ebbc9fe83d90" />
+  4. http response: để phản hồi dữ liệu về client: Status Code=200, Header add : Content-Type = application/json
+<img width="657" height="574" alt="image" src="https://github.com/user-attachments/assets/0561d099-6e01-43f4-a773-5aff88139122" />
+- test api thông qua trình duyệt:
+  <img width="510" height="320" alt="image" src="https://github.com/user-attachments/assets/519f90e1-960e-4770-855f-9c83f7ccf703" />
+<img width="1185" height="397" alt="image" src="https://github.com/user-attachments/assets/08713283-318f-4241-9d61-0af77a701803" />
 
 # 2.6. Tạo giao diện front-end:
 - html form gồm các file : index.html, fullname.js, fullname.css <=> index.html , nguyenthithuhien.js, nguyenthithuhien.css
